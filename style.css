@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+/* CSS RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --c1: #0a0c1b;
+  --c2: #1c1839;
+  --c3: #a65ccd;
+}
+body {
+  background-color: var(--c1);
+  font-size: 0.9375rem;
+  color: #fff;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.main-cont {
+  width: 250px;
+  background-color: var(--c2);
+  /* margin: 10px 10px; */
+  border-radius: 10px 10px 5px 5px;
+  margin: 50px 0px;
+  /* margin: 10px; */
+}
+
+.image {
+  height: 180px;
+  background-image: url(/images/image-header-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+  margin-bottom: 10px;
+}
+
+.overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--c3);
+  opacity: 0.7;
+  border-radius: 15px 15px 0 0;
+}
+
+.text,
+.rev {
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 10px 5px;
+  font-family: "Lexend Deca", Arial, Helvetica, sans-serif;
+}
+/* .text h1 {
+  line-height: 1;
+} */
+
+.text span {
+  color: var(--c3);
+}
+
+.text p {
+  margin-top: 15px;
+}
+
+.upper {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+.item {
+  margin-bottom: 10px;
+}
+.ht {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 700px) {
+  .main-cont {
+    display: grid;
+    width: 700px;
+    max-width: 800px;
+    grid-template-columns: repeat(2, 1fr);
+    /* border-radius: 10px; */
+  }
+  .text {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .text {
+    margin-right: 10px;
+    text-align: start;
+    padding: 0 15px;
+  }
+
+  .image {
+    background-image: url(/images/image-header-desktop.jpg);
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+    grid-row: 1/3;
+    grid-column: 2/3;
+    border-radius: 0px;
+
+    /* background-size: cover; */
+    /* height: 100%; */
+  }
+
+  .overlay {
+    border-radius: 0px;
+  }
+  .rev {
+    display: flex;
+    /* justify-content: space-evenly; */
+    text-align: start;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-top: 22px;
+  }
+}
